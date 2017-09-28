@@ -88,17 +88,6 @@ func resourceComputeTargetPool() *schema.Resource {
 	}
 }
 
-func convertStringArr(ifaceArr []interface{}) []string {
-	var arr []string
-	for _, v := range ifaceArr {
-		if v == nil {
-			continue
-		}
-		arr = append(arr, v.(string))
-	}
-	return arr
-}
-
 // Healthchecks need to exist before being referred to from the target pool.
 func convertHealthChecks(config *Config, project string, names []string) ([]string, error) {
 	urls := make([]string, len(names))
@@ -181,7 +170,7 @@ func resourceComputeTargetPoolCreate(d *schema.ResourceData, meta interface{}) e
 	// It probably maybe worked, so store the ID now
 	d.SetId(tpool.Name)
 
-	err = computeOperationWaitRegion(config, op, project, region, "Creating Target Pool")
+	err = computeOperationWait(config, op, project, "Creating Target Pool")
 	if err != nil {
 		return err
 	}
@@ -260,7 +249,7 @@ func resourceComputeTargetPoolUpdate(d *schema.ResourceData, meta interface{}) e
 			return fmt.Errorf("Error updating health_check: %s", err)
 		}
 
-		err = computeOperationWaitRegion(config, op, project, region, "Updating Target Pool")
+		err = computeOperationWait(config, op, project, "Updating Target Pool")
 		if err != nil {
 			return err
 		}
@@ -276,7 +265,7 @@ func resourceComputeTargetPoolUpdate(d *schema.ResourceData, meta interface{}) e
 			return fmt.Errorf("Error updating health_check: %s", err)
 		}
 
-		err = computeOperationWaitRegion(config, op, project, region, "Updating Target Pool")
+		err = computeOperationWait(config, op, project, "Updating Target Pool")
 		if err != nil {
 			return err
 		}
@@ -310,7 +299,7 @@ func resourceComputeTargetPoolUpdate(d *schema.ResourceData, meta interface{}) e
 			return fmt.Errorf("Error updating instances: %s", err)
 		}
 
-		err = computeOperationWaitRegion(config, op, project, region, "Updating Target Pool")
+		err = computeOperationWait(config, op, project, "Updating Target Pool")
 		if err != nil {
 			return err
 		}
@@ -325,7 +314,7 @@ func resourceComputeTargetPoolUpdate(d *schema.ResourceData, meta interface{}) e
 		if err != nil {
 			return fmt.Errorf("Error updating instances: %s", err)
 		}
-		err = computeOperationWaitRegion(config, op, project, region, "Updating Target Pool")
+		err = computeOperationWait(config, op, project, "Updating Target Pool")
 		if err != nil {
 			return err
 		}
@@ -343,7 +332,7 @@ func resourceComputeTargetPoolUpdate(d *schema.ResourceData, meta interface{}) e
 			return fmt.Errorf("Error updating backup_pool: %s", err)
 		}
 
-		err = computeOperationWaitRegion(config, op, project, region, "Updating Target Pool")
+		err = computeOperationWait(config, op, project, "Updating Target Pool")
 		if err != nil {
 			return err
 		}
@@ -436,7 +425,7 @@ func resourceComputeTargetPoolDelete(d *schema.ResourceData, meta interface{}) e
 		return fmt.Errorf("Error deleting TargetPool: %s", err)
 	}
 
-	err = computeOperationWaitRegion(config, op, project, region, "Deleting Target Pool")
+	err = computeOperationWait(config, op, project, "Deleting Target Pool")
 	if err != nil {
 		return err
 	}

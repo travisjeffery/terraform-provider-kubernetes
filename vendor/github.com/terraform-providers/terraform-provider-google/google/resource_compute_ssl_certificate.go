@@ -28,15 +28,7 @@ func resourceComputeSslCertificate() *schema.Resource {
 				Computed:      true,
 				ForceNew:      true,
 				ConflictsWith: []string{"name_prefix"},
-				ValidateFunc: func(v interface{}, k string) (ws []string, errors []error) {
-					// https://cloud.google.com/compute/docs/reference/latest/sslCertificates#resource
-					value := v.(string)
-					if len(value) > 63 {
-						errors = append(errors, fmt.Errorf(
-							"%q cannot be longer than 63 characters", k))
-					}
-					return
-				},
+				ValidateFunc:  validateGCPName,
 			},
 
 			"name_prefix": &schema.Schema{
@@ -56,9 +48,10 @@ func resourceComputeSslCertificate() *schema.Resource {
 			},
 
 			"private_key": &schema.Schema{
-				Type:     schema.TypeString,
-				Required: true,
-				ForceNew: true,
+				Type:      schema.TypeString,
+				Required:  true,
+				ForceNew:  true,
+				Sensitive: true,
 			},
 
 			"description": &schema.Schema{
@@ -121,7 +114,7 @@ func resourceComputeSslCertificateCreate(d *schema.ResourceData, meta interface{
 		return fmt.Errorf("Error creating ssl certificate: %s", err)
 	}
 
-	err = computeOperationWaitGlobal(config, op, project, "Creating SslCertificate")
+	err = computeOperationWait(config, op, project, "Creating SslCertificate")
 	if err != nil {
 		return err
 	}
@@ -165,7 +158,7 @@ func resourceComputeSslCertificateDelete(d *schema.ResourceData, meta interface{
 		return fmt.Errorf("Error deleting ssl certificate: %s", err)
 	}
 
-	err = computeOperationWaitGlobal(config, op, project, "Deleting SslCertificate")
+	err = computeOperationWait(config, op, project, "Deleting SslCertificate")
 	if err != nil {
 		return err
 	}

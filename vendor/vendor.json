@@ -3,6 +3,24 @@
 	"ignore": "appengine test github.com/hashicorp/nomad/ github.com/hashicorp/terraform/backend",
 	"package": [
 		{
+			"checksumSHA1": "of13Snya884hN/LdaPOxdw4uchk=",
+			"path": "cloud.google.com/go/bigtable",
+			"revision": "f6de2c509ed9d2af648c3c147207eaaf97149aed",
+			"revisionTime": "2017-09-27T04:06:58Z"
+		},
+		{
+			"checksumSHA1": "B1HkIrBavSgy6ntVyGr/eNUy44I=",
+			"path": "cloud.google.com/go/bigtable/internal/gax",
+			"revision": "f6de2c509ed9d2af648c3c147207eaaf97149aed",
+			"revisionTime": "2017-09-27T04:06:58Z"
+		},
+		{
+			"checksumSHA1": "guS8//7fh2L3Ary/o0x05Iq2UlY=",
+			"path": "cloud.google.com/go/bigtable/internal/option",
+			"revision": "f6de2c509ed9d2af648c3c147207eaaf97149aed",
+			"revisionTime": "2017-09-27T04:06:58Z"
+		},
+		{
 			"checksumSHA1": "ZLRh6zW4/DnVsGpgtt+ZiIaEFKc=",
 			"path": "cloud.google.com/go/compute/metadata",
 			"revision": "81b7822b1e798e8f17bf64b59512a5be4097e966",
@@ -13,6 +31,24 @@
 			"path": "cloud.google.com/go/internal",
 			"revision": "81b7822b1e798e8f17bf64b59512a5be4097e966",
 			"revisionTime": "2017-01-18T16:13:56Z"
+		},
+		{
+			"checksumSHA1": "QXE70x1YpmwfX8bqcncO5LxjeEA=",
+			"path": "cloud.google.com/go/internal/version",
+			"revision": "f6de2c509ed9d2af648c3c147207eaaf97149aed",
+			"revisionTime": "2017-09-27T04:06:58Z"
+		},
+		{
+			"checksumSHA1": "kV2MQQ1LR1uDSwsNJJKU+t7zuGc=",
+			"path": "cloud.google.com/go/longrunning",
+			"revision": "f6de2c509ed9d2af648c3c147207eaaf97149aed",
+			"revisionTime": "2017-09-27T04:06:58Z"
+		},
+		{
+			"checksumSHA1": "HPOCOkcp/L9cCvSrfJU4Ml98nPA=",
+			"path": "cloud.google.com/go/longrunning/autogen",
+			"revision": "f6de2c509ed9d2af648c3c147207eaaf97149aed",
+			"revisionTime": "2017-09-27T04:06:58Z"
 		},
 		{
 			"checksumSHA1": "NX4v3cbkXAJxFlrncqT9yEUBuoA=",
@@ -873,20 +909,20 @@
 			"revisionTime": "2017-01-30T21:42:45Z"
 		},
 		{
-			"checksumSHA1": "87aB2dgaK7wINQg5bMcBKPeVOYM=",
+			"checksumSHA1": "SKoOC90PHu7ZP60qmC+byZUyahI=",
 			"path": "github.com/terraform-providers/terraform-provider-google",
-			"revision": "df0a8bb608b0ba6b3e6d1938c3720526b0cdc3de",
-			"revisionTime": "2017-06-21T15:24:57Z",
-			"version": "v0.1.1",
-			"versionExact": "v0.1.1"
+			"revision": "4833c8b86df3362aac6c7f53402767d2fff8ff92",
+			"revisionTime": "2017-08-17T20:41:16Z",
+			"version": "v0.1.3",
+			"versionExact": "v0.1.3"
 		},
 		{
-			"checksumSHA1": "J8ZVmWx+j9/kaTEgj0lRe23klm8=",
+			"checksumSHA1": "Dg5s2WP1NETixMHKzCNz33ktaE8=",
 			"path": "github.com/terraform-providers/terraform-provider-google/google",
-			"revision": "df0a8bb608b0ba6b3e6d1938c3720526b0cdc3de",
-			"revisionTime": "2017-06-21T15:24:57Z",
-			"version": "v0.1.1",
-			"versionExact": "v0.1.1"
+			"revision": "4833c8b86df3362aac6c7f53402767d2fff8ff92",
+			"revisionTime": "2017-08-17T20:41:16Z",
+			"version": "v0.1.3",
+			"versionExact": "v0.1.3"
 		},
 		{
 			"checksumSHA1": "jfIUoeCY4uLz1zCgnCxndi5/UNE=",
@@ -1111,6 +1147,12 @@
 			"revisionTime": "2016-11-27T23:54:21Z"
 		},
 		{
+			"checksumSHA1": "ol7+qaIacUmBhA+eJtZY4+ut91c=",
+			"path": "google.golang.org/api/compute/v0.beta",
+			"revision": "cf8a9e7cedca7843a0fdd8adc9d019e84349768d",
+			"revisionTime": "2017-09-28T00:03:32Z"
+		},
+		{
 			"checksumSHA1": "OL1a45TdWBqDK1BO167p5Tlkgkc=",
 			"path": "google.golang.org/api/compute/v1",
 			"revision": "324744a33f1f37e63dd1695cfb3ec9a3e4a1cb05",
@@ -1147,10 +1189,34 @@
 			"revisionTime": "2017-06-27T10:28:48Z"
 		},
 		{
+			"checksumSHA1": "Mr2fXhMRzlQCgANFm91s536pG7E=",
+			"path": "google.golang.org/api/googleapi/transport",
+			"revision": "cf8a9e7cedca7843a0fdd8adc9d019e84349768d",
+			"revisionTime": "2017-09-28T00:03:32Z"
+		},
+		{
 			"checksumSHA1": "+u3FeHSXeRJZzw52OZsT3wUPb24=",
 			"path": "google.golang.org/api/iam/v1",
 			"revision": "3cc2e591b550923a2c5f0ab5a803feda924d5823",
 			"revisionTime": "2016-11-27T23:54:21Z"
+		},
+		{
+			"checksumSHA1": "dENAVft6XToomTHrm5J2zFt4hgU=",
+			"path": "google.golang.org/api/internal",
+			"revision": "cf8a9e7cedca7843a0fdd8adc9d019e84349768d",
+			"revisionTime": "2017-09-28T00:03:32Z"
+		},
+		{
+			"checksumSHA1": "slcGOTGSdukEPPSN81Q5WZGmhog=",
+			"path": "google.golang.org/api/iterator",
+			"revision": "cf8a9e7cedca7843a0fdd8adc9d019e84349768d",
+			"revisionTime": "2017-09-28T00:03:32Z"
+		},
+		{
+			"checksumSHA1": "Y3CG3ZFIYfF6AhvpiBMBAGcZMV4=",
+			"path": "google.golang.org/api/option",
+			"revision": "cf8a9e7cedca7843a0fdd8adc9d019e84349768d",
+			"revisionTime": "2017-09-28T00:03:32Z"
 		},
 		{
 			"checksumSHA1": "34BpqXixb+aV4iuOioQeSej255Y=",
@@ -1159,10 +1225,28 @@
 			"revisionTime": "2016-11-27T23:54:21Z"
 		},
 		{
+			"checksumSHA1": "niyKV8hpce7jHcgq2H1M7o3yla8=",
+			"path": "google.golang.org/api/runtimeconfig/v1beta1",
+			"revision": "cf8a9e7cedca7843a0fdd8adc9d019e84349768d",
+			"revisionTime": "2017-09-28T00:03:32Z"
+		},
+		{
 			"checksumSHA1": "4xiJmsULiSTn2iO4zUYtMgJqJSQ=",
 			"path": "google.golang.org/api/servicemanagement/v1",
 			"revision": "c8d75a8ec737f9b8b1ed2676c28feedbe21f543f",
 			"revisionTime": "2016-11-21T18:05:46Z"
+		},
+		{
+			"checksumSHA1": "8QWh6vhaOJVjrf/HQuZaC7idg7Y=",
+			"path": "google.golang.org/api/sourcerepo/v1",
+			"revision": "cf8a9e7cedca7843a0fdd8adc9d019e84349768d",
+			"revisionTime": "2017-09-28T00:03:32Z"
+		},
+		{
+			"checksumSHA1": "CrBTFwxD7mzkQ7OgBeYE2yhE/cs=",
+			"path": "google.golang.org/api/spanner/v1",
+			"revision": "cf8a9e7cedca7843a0fdd8adc9d019e84349768d",
+			"revisionTime": "2017-09-28T00:03:32Z"
 		},
 		{
 			"checksumSHA1": "moKPpECJZQR/mANGD26E7Pbxn4I=",
@@ -1175,6 +1259,24 @@
 			"path": "google.golang.org/api/storage/v1",
 			"revision": "3cc2e591b550923a2c5f0ab5a803feda924d5823",
 			"revisionTime": "2016-11-27T23:54:21Z"
+		},
+		{
+			"checksumSHA1": "W24V3U8s386thzZOK6g+EjlKeu0=",
+			"path": "google.golang.org/api/transport",
+			"revision": "cf8a9e7cedca7843a0fdd8adc9d019e84349768d",
+			"revisionTime": "2017-09-28T00:03:32Z"
+		},
+		{
+			"checksumSHA1": "8VFd1yjiXs9+8Wc/uxnKS4zOOlk=",
+			"path": "google.golang.org/api/transport/grpc",
+			"revision": "cf8a9e7cedca7843a0fdd8adc9d019e84349768d",
+			"revisionTime": "2017-09-28T00:03:32Z"
+		},
+		{
+			"checksumSHA1": "gZqIfbw6I/Cmw/+M278M2E7JzsU=",
+			"path": "google.golang.org/api/transport/http",
+			"revision": "cf8a9e7cedca7843a0fdd8adc9d019e84349768d",
+			"revisionTime": "2017-09-28T00:03:32Z"
 		},
 		{
 			"checksumSHA1": "NU7Al7Ud5MQZxti3Pv6YgVrzLrM=",
@@ -1225,6 +1327,30 @@
 			"revisionTime": "2015-05-27T04:07:48Z"
 		},
 		{
+			"checksumSHA1": "B22iMMY2vi1Q9kseWb/ZznpW8lQ=",
+			"path": "google.golang.org/genproto/googleapis/api/annotations",
+			"revision": "1e559d0a00eef8a9a43151db4665280bd8dd5886",
+			"revisionTime": "2017-09-18T11:17:02Z"
+		},
+		{
+			"checksumSHA1": "3/2j1ijr+1sGbjhwozEShQ6hckU=",
+			"path": "google.golang.org/genproto/googleapis/bigtable/admin/v2",
+			"revision": "1e559d0a00eef8a9a43151db4665280bd8dd5886",
+			"revisionTime": "2017-09-18T11:17:02Z"
+		},
+		{
+			"checksumSHA1": "5GFgIRbCz1b0Okn2XEjGdRzBYjc=",
+			"path": "google.golang.org/genproto/googleapis/bigtable/v2",
+			"revision": "1e559d0a00eef8a9a43151db4665280bd8dd5886",
+			"revisionTime": "2017-09-18T11:17:02Z"
+		},
+		{
+			"checksumSHA1": "fau7fK0XvEJu/gw9ek0B1IZfcxQ=",
+			"path": "google.golang.org/genproto/googleapis/longrunning",
+			"revision": "1e559d0a00eef8a9a43151db4665280bd8dd5886",
+			"revisionTime": "2017-09-18T11:17:02Z"
+		},
+		{
 			"checksumSHA1": "AvVpgwhxhJgjoSledwDtYrEKVE4=",
 			"path": "google.golang.org/genproto/googleapis/rpc/status",
 			"revision": "aa2eb687b4d3e17154372564ad8d6bf11c3cf21f",
@@ -1253,6 +1379,12 @@
 			"path": "google.golang.org/grpc/credentials",
 			"revision": "7657092a1303cc5a6fa3fee988d57c665683a4da",
 			"revisionTime": "2017-08-09T21:16:03Z"
+		},
+		{
+			"checksumSHA1": "QbufP1o0bXrtd5XecqdRCK/Vl0M=",
+			"path": "google.golang.org/grpc/credentials/oauth",
+			"revision": "4e1a1ebe3a547139bda65b5259960e5ea20b2798",
+			"revisionTime": "2017-09-28T17:12:44Z"
 		},
 		{
 			"checksumSHA1": "2NbY9kmMweE4VUsruRsvmViVnNg=",
