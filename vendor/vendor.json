@@ -2371,5 +2371,5 @@
 			"versionExact": "v1.6.1"
 		}
 	],
-	"rootPath": "github.com/terraform-providers/terraform-provider-kubernetes"
+	"rootPath": "github.com/confluentinc/terraform-provider-kubernetes"
 }
