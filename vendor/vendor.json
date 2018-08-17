@@ -3225,5 +3225,5 @@
 			"revisionTime": "2017-07-28T13:53:02Z"
 		}
 	],
-	"rootPath": "github.com/terraform-providers/terraform-provider-kubernetes"
+	"rootPath": "github.com/confluentinc/terraform-provider-kubernetes"
 }
